@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .card {
+        margin: 10px auto;
+        position: relative;
+        top: 360px;
+        font-size: 20px;
+    }
+
+    .card-body {
+        margin: 10px auto;
+    }
+
+    .row {
+        margin: 10px auto;
+        
+    }
+
+    .btn-primary {
+        margin: 10px auto;
+        color: #111;
+        background: #39ff14;
+        box-shadow: 0 0 50px #39ff14;
+        border-radius: 50px;
+    }
+
+    #btnlogin {
+        position: relative;
+        top: 430px;
+        left: 865px;
+        color: #111;
+        background: #39ff14;
+        box-shadow: 0 0 50px #39ff14;
+        border-radius: 50px;
+        padding: 50px;
+        font-size: 30px;
+    }
+
+    .carousel-inner {
+        position: absolute;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div  id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../public/images/1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../public/images/2.avif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../public/images/3.avif" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+        </button>
+    </div>
+    <div class="card" style="width: 18rem; display: none ;" id="cardbtn">
+        <div class="card-body">
+            <form action="">
+                <label for="txtlogin" class="form-label">Login/E-mail</label>
+                <input type="email" name="txtlogin" id="txtlogin" class="form-control">
+                <label for="txtpass" class="form-label">Senha</label>
+                <input type="password" name="txtpass" id="txtpass" class="form-control">
+            </form>
+            <div class="row">
+                <a href="entergame.html " class="btn btn-primary">Entrar no Game</a>
+                <a href="register.html" class="btn btn-primary">Registrar</a>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn" id="btnlogin" onclick="abrirCard()">LOGIN</button>
+    <main>
+
+    </main>
+    <script>
+        function abrirCard() {
+            var card = document.getElementById("cardbtn");
+            var btn = document.getElementById("btnlogin")
+            if (card.style.display === "none") {
+                card.style.display = "flex";
+                btn.style.display = "none";
+            } 
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
