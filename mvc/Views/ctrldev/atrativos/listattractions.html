@@ -15,7 +15,7 @@
     <nav>
         <h2 class="text-center">Listando Atrativos</h2>
         <div class="row">
-            <button class="btn bg-warning"><a href="addattractions.html" class="btn"><i class="bi bi-person-plus"></i>
+            <button class="btn bg-warning"><a href="/addatrativos" class="btn"><i class="bi bi-person-plus"></i>
                     Adicionar Atrativo</a></button>
         </div>
         <section class="listar m-4 border border-warning border-4">
@@ -59,11 +59,11 @@
 
                 elAtrativos.innerHTML += `
                 <div class="row m-3 border p-2 text-start">
-                    <div class="col border-end text-center">${atrativo.nome}</div>
+                    <div class="col border-end text-center" >${atrativo.nome}</div>
                     <div class="col  border-end text-center">${atrativo.lat}</div>
                     <div class="col  border-end text-center">${atrativo.long}</div>
                     <div class="col  border-end text-center">${atrativo.desc}</div>     
-                    <div class="col  border-end text-center images"><img src="../public/images/${atrativo.image}" alt=""></div>
+                    <div class="col  border-end text-center images"><img src="../images/${atrativo.image}" alt=""></div>
                     <div class="col text-center"><button class="btn bg-success "><button onclik="atualizar(${atrativo.id})"><i class="bi bi-pen-fill m-1"></i></div>
                     <div class="col text-center"><button class="btn bg-danger"><button onclik="apagar(${atrativo.id}, ${atrativo.nome})"><i class="bi bi-trash-fill m-1"></i></div>
                  </div>
